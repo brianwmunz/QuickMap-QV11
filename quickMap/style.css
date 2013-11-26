@@ -1,0 +1,7 @@
+﻿.olControlAttribution{font-family:Arial, Helvetica, sans-serif;bottom:5px;font-size:10px;}
+.olControlZoomPanel{top:7px;}
+.olControlZoomToMaxExtentItemInactive{display:none;}
+#hoverBox{display:none;font-size:12px;background-color: #fff;color:#333;font-family:Arial, Helvetica, sans-serif;position:absolute;top:0px;left:0px;background-repeat:no-repeat;overflow:hidden;z-index:9999999 !important;padding:0px 10px;border:1px solid #439400;line-height:14px;}
+#hoverBox span img{margin-right:6px;}
+#hoverBox span span{float:right;}
+#hoverBox h3{font-size:13px;font-weight:bold;padding:0px;margin:10px 0px 2px 10px;color:#666}

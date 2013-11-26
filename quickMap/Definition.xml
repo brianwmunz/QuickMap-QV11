@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExtensionObject Label="Quick Map" Description="Quick Map" PageHeight="300000">
+  <Dimension Label="Dimensions" Multiple="" TargetName="Region Dimension" Initial=""/>
+  <Measurement Label="Measurement" Initial="" Width="400" />
+  <Measurement Label="ColorExpression" Initial="" Width="400" />
+  <Measurement Label="Popup Contents" Initial="" Width="400" />
+  <Text Label="Max Line Width and Point Size" Type="text" Expression="20" Width="400" />
+  <Text Label="Default Opacity (decimal)" Type="text" Expression=".7" Width="400" />
+  <Text Label="Use Other Tile Set" Type="checkbox" Width="400" />
+  <Text Label="Tileset URL" Type="text" Expression="" Width="400" />
+  <Text Label="KML file" Type="text" Expression="" Width="400" />
+  <Initiate Name="Chart.Title" value="Quick Map" />
+  <Initiate Name="Caption.Text" Value="Quick Map" />
+  <Initiate Name="Chart.BgColor.ColorHex" value="#FFF" />
+  <PropertiesPage  Version="11" File="MyProperties.qvpp" />  
+  </ExtensionObject>
+
+
+
