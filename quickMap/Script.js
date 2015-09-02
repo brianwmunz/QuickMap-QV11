@@ -63,7 +63,7 @@ function Map_Done() {
 			_this.Data.SelectTextsInColumn(0, false, cF);
 			//search in QlikView for all of the selected features
 		}
-
+		maxValP = 0;
 		maxVal = 0;
 		var _this = this;
 		//set this to _this in order to avoid confusion/conflicts with other processes which ahve their own "this"
