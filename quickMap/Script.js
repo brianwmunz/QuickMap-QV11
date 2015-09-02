@@ -638,14 +638,19 @@ function Map_Done() {
 					if (_this.Data.HeaderRows[0].length == 5) {
 						dimSet = 1;
 					}
-					if (maxValS == 0) {
+					//if (maxValS == 0) {
+					
+					// JCM: Reset the max value every time selection, expressions, or whatever changes
+					maxValS = 0; 
+					
+					
 						for (var rowIx = 0; rowIx < _this.Data.Rows.length; rowIx++) {
 							var row = _this.Data.Rows[rowIx];
 							if (parseFloat(row[1 + dimSet].text) > maxValS) {
 								maxValS = parseFloat(row[1 + dimSet].text);
 							}
 						}
-					}
+					//}
 
 					//fArray = [];
 					//var fCollection = new OpenLayers.Geometry.Collection();
@@ -657,7 +662,10 @@ function Map_Done() {
 						thisR = thisR.toUpperCase();
 						var thisC = "";
 
-						var thisO = parseFloat(row[1 + dimSet].text) / maxValS;
+						
+						// JCM add base opacity as a multiplier so that the maximum opacity is never higher than the configured value
+						var thisO = (parseFloat(row[1 + dimSet].text) / maxValS) * lineO ;
+						
 						if ((row[2 + dimSet].text != "") && (row[2 + dimSet].text != "-")) {
 							thisC = colorFormatter(row[2 + dimSet].text);
 						} else {
