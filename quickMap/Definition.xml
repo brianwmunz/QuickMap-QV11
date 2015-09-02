@@ -3,9 +3,9 @@
   <Dimension Label="Dimensions" Multiple="" TargetName="Region Dimension" Initial=""/>
   <Measurement Label="Measurement" Initial="" Width="400" />
   <Measurement Label="ColorExpression" Initial="" Width="400" />
-  <Measurement Label="Popup Contents" Initial="" Width="400" />
+  <Measurement Label="Popup Contents" Type="text" Expression="" Width="400" />
   <Text Label="Max Line Width and Point Size" Type="text" Expression="20" Width="400" />
-  <Text Label="Default Opacity (decimal)" Type="text" Expression=".7" Width="400" />
+  <Text Label="Default Opacity (decimal)" Initial=".7" Width="400" />
   <Text Label="Use Other Tile Set" Type="checkbox" Width="400" />
   <Text Label="Tileset URL" Type="text" Expression="" Width="400" />
   <Text Label="KML file" Type="text" Expression="" Width="400" />
