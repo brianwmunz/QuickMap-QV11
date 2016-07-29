@@ -195,8 +195,20 @@ function Map_Done() {
 				}
 			}
 		});
-		window[mapName].events.register("mousemove", layerVector, function(e) {
-			$("#hoverBox").css("top", e.clientY - 15 + "px").css("left", e.clientX + 30 + "px")
+		window[mapName].events.register("mousemove", layerVector, function(event) {
+			eventDoc = (event.target && event.target.ownerDocument) || document;
+			doc = eventDoc.documentElement;
+			body = eventDoc.body;
+		
+			//try to get scroll position
+			event.pageX = event.clientX +
+			  (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+			  (doc && doc.clientLeft || body && body.clientLeft || 0);
+			event.pageY = event.clientY +
+			  (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+			  (doc && doc.clientTop  || body && body.clientTop  || 0 );
+
+			$("#hoverBox").css("top", event.pageY - 15 + "px").css("left", event.pageX + 30 + "px");
 		});
 		//array of features
 		var fArray = [];
